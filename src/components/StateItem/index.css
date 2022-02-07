@@ -1,0 +1,38 @@
+.state-item-li {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+.state-item-para {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 20px;
+  text-align: right;
+  width: 16%;
+}
+.state-item-name {
+  font-family: Roboto;
+  font-size: 14px;
+  font-weight: 500;
+  padding: 20px;
+  text-align: left;
+  width: 20%;
+  color: #f1f5f9;
+}
+.red {
+  color: #ff073a;
+}
+.green {
+  color: #28a745;
+}
+.blue {
+  color: #007bff;
+}
+.grey {
+  color: #6c757d;
+}
+.white {
+  color: #94a3b8;
+}

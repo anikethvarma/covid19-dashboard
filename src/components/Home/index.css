@@ -1,0 +1,105 @@
+.home-bg {
+  background-color: #161625;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-width: 100vw;
+}
+.home-input-container {
+  background: #2f2f43;
+  border: 0;
+  display: flex;
+  align-items: center;
+  border: solid 1px black;
+  border-radius: 5px;
+  width: 70vw;
+  max-width: 600px;
+  height: 36px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.home-input {
+  background: #2f2f43;
+  border: 0;
+  color: #94a3b8;
+  height: 100%;
+  width: 100%;
+  font-size: 15px;
+  font-family: Roboto;
+}
+.home-input-search-icon {
+  color: #94a3b8;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+.home-table {
+  border: solid 1px #475569;
+  background-color: #1e1e30;
+  border-radius: 10px;
+  list-style-type: none;
+  padding: 0;
+  width: 90vw;
+}
+.home-table-row {
+  display: flex;
+  justify-content: space-between;
+  border-bottom: solid 1px #475569;
+}
+.home-table-header {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: right;
+  color: #f8fafc;
+  padding: 20px;
+  width: 16%;
+}
+.home-table-header-name {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 700;
+  text-align: left;
+  color: #f8fafc;
+  padding: 20px;
+  width: 20%;
+}
+.home-total-tabs-ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70vw;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.home-total-tabs-li {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.home-total-tabs-head {
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+}
+.home-total-count {
+  font-family: Roboto;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: center;
+}
+.red {
+  color: #ff073a;
+}
+.green {
+  color: #28a745;
+}
+.blue {
+  color: #007bff;
+}
+.grey {
+  color: #6c757d;
+}

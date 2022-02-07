@@ -1,0 +1,29 @@
+.footer-bg {
+  background: #161625;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  width: 100vw;
+}
+.footer-logo {
+  line-height: 32px;
+}
+.footer-paragraph {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  color: #94a3b8;
+}
+.footer-icons-container {
+  display: flex;
+}
+
+.footer-icon {
+  color: #cbd5e1;
+  font-size: 42px;
+  margin: 20px;
+}
