@@ -1,3 +1,6 @@
+.nav-link {
+  text-decoration: none;
+}
 .header-main-container {
   background: #1e1e30;
   display: flex;
@@ -5,7 +8,7 @@
   justify-content: space-between;
   padding-left: 10vw;
   padding-right: 10vw;
-  width: 100vw;
+  min-width: 100vw;
 }
 .header-logo {
   line-height: 24px;

@@ -1,3 +1,6 @@
+.nav-link {
+  text-decoration: none;
+}
 .home-bg {
   background-color: #161625;
   display: flex;
@@ -5,6 +8,7 @@
   align-items: center;
   justify-content: center;
   min-width: 100vw;
+  padding: 10px;
 }
 .home-input-container {
   background: #2f2f43;
@@ -17,7 +21,6 @@
   max-width: 600px;
   height: 36px;
   margin-top: 20px;
-  margin-bottom: 20px;
 }
 .home-input {
   background: #2f2f43;
@@ -40,6 +43,7 @@
   list-style-type: none;
   padding: 0;
   width: 90vw;
+  min-width: 500px;
 }
 .home-table-row {
   display: flex;
@@ -102,4 +106,63 @@
 }
 .grey {
   color: #6c757d;
+}
+.suggestion {
+  color: white;
+}
+.suggestion-ul {
+  padding: 0;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.suggestion-li {
+  display: flex;
+  background-color: transparent;
+  justify-content: space-between;
+  align-items: center;
+  width: 70vw;
+  max-width: 600px;
+}
+.suggestion-state-name {
+  font-family: Roboto;
+  font-size: 16px;
+  text-align: left;
+  color: #64748b;
+}
+.suggestion-button {
+  border: solid 1px #facc15;
+  color: #facc15;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: green;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 70px;
+  padding: 5px;
+}
+.suggestion-icon {
+  font-size: 24px;
+}
+@media (max-width: 768px) {
+  .home-table {
+    border: solid 1px #475569;
+    background-color: #1e1e30;
+    border-radius: 10px;
+    list-style-type: none;
+    padding: 0;
+    max-width: 90vw;
+    overflow: auto;
+  }
+  .home-table-row {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: solid 1px #475569;
+    width: 1000px;
+  }
 }

@@ -36,3 +36,11 @@
 .white {
   color: #94a3b8;
 }
+@media (max-width: 768px) {
+  .state-item-li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 1000px;
+  }
+}

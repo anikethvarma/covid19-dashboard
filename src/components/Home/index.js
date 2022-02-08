@@ -1,5 +1,7 @@
 import {Component} from 'react'
+import {Link} from 'react-router-dom'
 import {BsSearch} from 'react-icons/bs'
+import {BiChevronRightSquare} from 'react-icons/bi'
 import Loader from 'react-loader-spinner'
 import Header from '../Header'
 import Footer from '../Footer'
@@ -160,7 +162,13 @@ const formattedStatesList = statesList.map(eachElement => ({
 }))
 
 class Home extends Component {
-  state = {statesData: [], isLoading: true}
+  state = {
+    searchInput: '',
+    suggestionList: [],
+    isSuggesting: false,
+    statesData: [],
+    isLoading: true,
+  }
 
   componentDidMount() {
     this.getDetails()
@@ -247,8 +255,47 @@ class Home extends Component {
     return totalDeceased
   }
 
+  searchSuggestions = () => {
+    const {searchInput} = this.state
+    if (searchInput !== '') {
+      const getSuggestionList = formattedStatesList.filter(eachElement =>
+        eachElement.stateName.toLowerCase().includes(searchInput.toLowerCase()),
+      )
+      this.setState({suggestionList: getSuggestionList, isSuggesting: true})
+    } else {
+      this.setState({isSuggesting: false})
+    }
+  }
+
+  renderSuggestion = () => {
+    const {suggestionList} = this.state
+    return (
+      <ul className="suggestion-ul">
+        {suggestionList.map(eachElement => (
+          <Link
+            to={`/state/${eachElement.stateCode}`}
+            className="nav-link"
+            key={eachElement.stateCode}
+          >
+            <li className="suggestion-li" key={eachElement.stateCode}>
+              <p className="suggestion-state-name">{eachElement.stateName}</p>
+              <button type="button" className="suggestion-button">
+                {eachElement.stateCode}{' '}
+                <BiChevronRightSquare className="suggestion-icon" />
+              </button>
+            </li>
+          </Link>
+        ))}
+      </ul>
+    )
+  }
+
+  onSearchState = event => {
+    this.setState({searchInput: event.target.value}, this.searchSuggestions)
+  }
+
   render() {
-    const {statesData, isLoading} = this.state
+    const {statesData, isLoading, isSuggesting} = this.state
 
     return (
       <>
@@ -266,8 +313,10 @@ class Home extends Component {
                   text="search"
                   className="home-input"
                   placeholder="Enter State"
+                  onChange={this.onSearchState}
                 />
               </div>
+              {isSuggesting && <div>{this.renderSuggestion()}</div>}
               <ul className="home-total-tabs-ul">
                 <li className="home-total-tabs-li">
                   <p className="home-total-tabs-head red">Confirmed</p>
